@@ -18,6 +18,7 @@ class YuriLoginType(BaseModel):
 
 class YuriCreateTrainRecordType(BaseModel):
     caregiverId: str = Field(..., example='User id')
+    name: str = Field(..., example='User nickk name')
     title: str = Field(..., example='Name of test')
     completeness: int = Field(..., example='Completeness')
     errorPrompt: list[str] = Field(..., example='Error during training')
@@ -30,6 +31,7 @@ class YuriCreateTrainRecordType(BaseModel):
                 {
                     "caregiverId": "2024-07-29T11:50:35.479Z-17222538354797020755e-3691-49d3-b5bd-4248ee5b30bb",
                     "title": '左翻',
+                    'name': 'nickname',
                     "completeness": 100,
                     "errorPrompt": ['Small error, not big deal'],
                     "time": '2025/01/01',
